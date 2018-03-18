@@ -87,12 +87,12 @@
 <meta property="og:site_name" content="Cassie Chai&#39;s blog">
 <meta property="og:description" content="python实现链表依赖于类生成的实例，每个节点都是一个对象，组合在一起形成一个完整链表 对于node类只需关注两点：value 和 next对于linked_list需要关心的：head（头结点，默认是node），length（列表的长度） 链表的数据结构如下图所示：  链表的实现定义链表定义节点类Node123456789101112class Node:     def __init__(s">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2018/03/18/img/链表.png">
-<meta property="og:updated_time" content="2018-03-18T10:34:20.033Z">
+<meta property="og:image" content="http://yoursite.com/img/链表.png">
+<meta property="og:updated_time" content="2018-03-18T10:36:14.939Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python数据结构-链表">
 <meta name="twitter:description" content="python实现链表依赖于类生成的实例，每个节点都是一个对象，组合在一起形成一个完整链表 对于node类只需关注两点：value 和 next对于linked_list需要关心的：head（头结点，默认是node），length（列表的长度） 链表的数据结构如下图所示：  链表的实现定义链表定义节点类Node123456789101112class Node:     def __init__(s">
-<meta name="twitter:image" content="http://yoursite.com/2018/03/18/img/链表.png">
+<meta name="twitter:image" content="http://yoursite.com/img/链表.png">
 
 
 
@@ -423,7 +423,7 @@
         <p>python实现链表依赖于类生成的实例，每个节点都是一个对象，组合在一起形成一个完整链表</p>
 <p>对于node类只需关注两点：value 和 next<br>对于linked_list需要关心的：head（头结点，默认是node），length（列表的长度）</p>
 <h2 id="链表的数据结构"><a href="#链表的数据结构" class="headerlink" title="链表的数据结构"></a>链表的数据结构</h2><p>如下图所示：</p>
-<p><img src="../img/链表.png" alt=""></p>
+<p><img src="/img/链表.png" alt=""></p>
 <h2 id="链表的实现"><a href="#链表的实现" class="headerlink" title="链表的实现"></a>链表的实现</h2><h3 id="定义链表"><a href="#定义链表" class="headerlink" title="定义链表"></a>定义链表</h3><p>定义<strong>节点类Node</strong><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Node</span>:</span></span><br><span class="line">     <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, value)</span>:</span></span><br><span class="line">     <span class="string">'''</span></span><br><span class="line"><span class="string">     value: 节点保存的数据，next: 保存下一个节点对象</span></span><br><span class="line"><span class="string">     '''</span></span><br><span class="line">         self.val = value</span><br><span class="line">         self.next = <span class="keyword">None</span></span><br><span class="line">     <span class="function"><span class="keyword">def</span> <span class="title">__repr__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">'''</span></span><br><span class="line"><span class="string">        用来定义Node的字符输出，print为输出value</span></span><br><span class="line"><span class="string">        '''</span></span><br><span class="line">        <span class="keyword">return</span> str(self.value)</span><br></pre></td></tr></table></figure></p>
 <h3 id="操作链表"><a href="#操作链表" class="headerlink" title="操作链表"></a>操作链表</h3><p>定义<strong>链表类LinkedList</strong><br>链表要包括：</p>
 <h4 id="属性："><a href="#属性：" class="headerlink" title="属性："></a>属性：</h4><p>链表头：head<br>链表长度：length</p>
