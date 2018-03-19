@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[牛顿迭代法求平方根]]></title>
+    <url>%2F2018%2F03%2F19%2Fpython%E7%89%9B%E9%A1%BF%E8%BF%AD%E4%BB%A3%E6%B3%95%E6%B1%82%E5%B9%B3%E6%96%B9%E6%A0%B9%2F</url>
+    <content type="text"><![CDATA[牛顿迭代法从函数意义上理解：我们是要求函数f(x) = x²，使f(x) = num的近似解，即x² - num = 0的近似解。 从几何意义上理解：我们是要求抛物线g(x) = x² - num与x轴交点（g(x) = 0）最接近的点。 我们假设g(x0)=0，即x0是正解，那么我们要做的就是让近似解x不断逼近x0。 先任取一个初始值xi，经过这个点（xi,f(xi)）的切线方程为 f(x) = f(xi) + f′(xi)(x−xi)，令切线方程等于0 (纵轴截距取0)，即可求出：x~i+1~ = x~i~−f(x~i~) / f′(x~i~) 可以由此得到 从几何图形上看，因为导数是切线，通过不断迭代，导数与x轴的交点会不断逼近x0。 123456789def mySqrt(self, x): """ :type x: int :rtype: int """ r = x while r*r &gt; x: r = (r + x/r) / 2 return r]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>算法</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[python数据结构-链表]]></title>
     <url>%2F2018%2F03%2F18%2Fpython%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84-%E9%93%BE%E8%A1%A8%2F</url>
     <content type="text"><![CDATA[python实现链表依赖于类生成的实例，每个节点都是一个对象，组合在一起形成一个完整链表 对于node类只需关注两点：value 和 next对于linked_list需要关心的：head（头结点，默认是node），length（列表的长度） 链表的数据结构如下图所示： 链表的实现定义链表定义节点类Node123456789101112class Node: def __init__(self, value): ''' value: 节点保存的数据，next: 保存下一个节点对象 ''' self.val = value self.next = None def __repr__(self): ''' 用来定义Node的字符输出，print为输出value ''' return str(self.value) 操作链表定义链表类LinkedList链表要包括：属性：链表头：head链表长度：length 方法： is_empty() 链表是否为空 add(item) 链表头部添加元素 append(item) 链表尾部添加元素 insert(index, item) 指定位置添加元素 delete(index) 删除指定位置节点 remove(item) 删除某个数值节点 search(item) 查找节点是否存在 判断是否为空: is_Empty()12def is_empty(self): return self.length == 0 头部添加一个节点：add()123456def add(self, item): node = Node(item) # 将新节点的链接域next指向头节点，即head指向的位置 node.next = self.head # 将链表的头head指向新节点 self.head = node 尾部添加一个节点：append()12345678910111213def append(self, item): # 确保item是node对象 item = Node(item) # 先判断链表是否为空，若是空链表，则将head指向新节点 if self.is_empty(): self.head = node # 若不为空，则找到尾部，将尾节点的next指向新节点 else: node = self.head while node.next: node = node.next node.next = item self.length += 1 指定位置添加节点：insert()12345678910111213141516171819202122def insert(self, index, item): # 若指定位置pos为第一个元素之前，则执行头部插入 if index &lt;= 0: self.add(item) # 若指定位置超过链表尾部，则执行尾部插入 elif index &gt; (self.length()-1): self.append(item) # 找到指定位置 else: node = Node(item) # 从头节点开始移动到插入位置的前一个节点 pre = self.head while index-1: pre = pre.next index -= 1 # 先将新节点node的next指向插入位置的节点 node.next = pre.next # 将插入位置的前一个节点的next指向新节点 pre.next = node self.length += 1 删除数值是item的节点：remove(item)12345678910111213141516171819def remove(self, item): pre = None # 前一个节点 cur = self.head # 当前节点 while cur: # 找到了指定元素 if cur.item == item: # 如果第一个就是删除的节点 if not pre: # 将头指针指向头节点的后一个节点 self.head = cur.next else: # 将删除位置前一个节点的next指向删除位置的后一个节点 pre.next = cur.next self.length -= 1 break else: # 继续按链表后移节点 pre = cur cur = cur.next 删除某个位置的节点：delete(index)123456789101112131415def delete(self, index): if index &gt; self.length: # 索引值超出范围直接提示并且退出 print("Index is out of range.") return else: if index == 0: self.head = self.head.next else: pre = self.head while index - 1: pre = pre.next index -= 1 pre.next = pre.next.pnext self.length -= 1 查找节点是否存在：search()12345678def search(self,item): """链表查找节点是否存在，并返回True或者False""" cur = self.head while cur != None: if cur.item == item: return True cur = cur.next return False]]></content>
