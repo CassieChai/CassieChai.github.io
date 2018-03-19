@@ -83,17 +83,18 @@
 <meta name="keywords" content="python,算法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="牛顿迭代法求平方根">
-<meta property="og:url" content="http://yoursite.com/2018/03/19/python牛顿迭代法求平方根/index.html">
+<meta property="og:url" content="http://yoursite.com/2018/03/19/牛顿迭代法求平方根/index.html">
 <meta property="og:site_name" content="Cassie Chai&#39;s blog">
 <meta property="og:description" content="牛顿迭代法从函数意义上理解：我们是要求函数f(x) = x²，使f(x) = num的近似解，即x² - num = 0的近似解。 从几何意义上理解：我们是要求抛物线g(x) = x² - num与x轴交点（g(x) = 0）最接近的点。 我们假设g(x0)=0，即x0是正解，那么我们要做的就是让近似解x不断逼近x0。  先任取一个初始值xi，经过这个点（xi,f(xi)）的切线方程为 f(x)">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2018/03/19/img/0_1324910112e742.gif">
-<meta property="og:image" content="http://yoursite.com/2018/03/19/img/1521470493334.png">
-<meta property="og:updated_time" content="2018-03-19T14:44:53.000Z">
+<meta property="og:image" content="http://yoursite.com/img/0_1324910112e742.gif">
+<meta property="og:image" content="http://yoursite.com/img/1521470845824.png">
+<meta property="og:image" content="http://yoursite.com/img/1521470493334.png">
+<meta property="og:updated_time" content="2018-03-19T14:47:43.733Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="牛顿迭代法求平方根">
 <meta name="twitter:description" content="牛顿迭代法从函数意义上理解：我们是要求函数f(x) = x²，使f(x) = num的近似解，即x² - num = 0的近似解。 从几何意义上理解：我们是要求抛物线g(x) = x² - num与x轴交点（g(x) = 0）最接近的点。 我们假设g(x0)=0，即x0是正解，那么我们要做的就是让近似解x不断逼近x0。  先任取一个初始值xi，经过这个点（xi,f(xi)）的切线方程为 f(x)">
-<meta name="twitter:image" content="http://yoursite.com/2018/03/19/img/0_1324910112e742.gif">
+<meta name="twitter:image" content="http://yoursite.com/img/0_1324910112e742.gif">
 
 
 
@@ -124,7 +125,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/03/19/python牛顿迭代法求平方根/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/03/19/牛顿迭代法求平方根/"/>
 
 
 
@@ -296,7 +297,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/19/python牛顿迭代法求平方根/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/19/牛顿迭代法求平方根/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Cassie Chai">
@@ -384,7 +385,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  231 字
+                  220 字
                 </span>
               
 
@@ -424,10 +425,10 @@
         <h2 id="牛顿迭代法"><a href="#牛顿迭代法" class="headerlink" title="牛顿迭代法"></a>牛顿迭代法</h2><p>从函数意义上理解：我们是要求函数f(x) = x²，使f(x) = num的近似解，即x² - num = 0的<strong>近似解</strong>。</p>
 <p>从几何意义上理解：我们是要求抛物线g(x) = x² - num与x轴交点（g(x) = 0）最接近的点。</p>
 <p>我们假设g(x0)=0，即x0是正解，那么我们要做的就是让近似解x不断逼近x0。</p>
-<p><img src="../img/0_1324910112e742.gif" alt="img"></p>
-<p>先任取一个初始值xi，经过这个点（xi,f(xi)）的切线方程为 f(x) = f(xi) + f′(xi)(x−xi)，令切线方程等于0 (纵轴截距取0)，即可求出：<strong>x~i+1~ = x~i~−f(x~i~) / f′(x~i~)</strong></p>
+<p><img src="/img/0_1324910112e742.gif" alt="img"></p>
+<p>先任取一个初始值xi，经过这个点（xi,f(xi)）的切线方程为 f(x) = f(xi) + f′(xi)(x−xi)，令切线方程等于0 (纵轴截距取0)，即可求出：<img src="/img/1521470845824.png" alt="52147084582"></p>
 <p>可以由此得到</p>
-<p><img src="../img/1521470493334.png" alt="52147049333"></p>
+<p><img src="/img/1521470493334.png" alt="52147049333"></p>
 <p>从几何图形上看，因为导数是切线，通过不断迭代，导数与x轴的交点会不断逼近x0。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">mySqrt</span><span class="params">(self, x)</span>:</span></span><br><span class="line">       <span class="string">"""</span></span><br><span class="line"><span class="string">       :type x: int</span></span><br><span class="line"><span class="string">       :rtype: int</span></span><br><span class="line"><span class="string">       """</span></span><br><span class="line">       r = x</span><br><span class="line">       <span class="keyword">while</span> r*r &gt; x:</span><br><span class="line">           r = (r + x/r) / <span class="number">2</span></span><br><span class="line">       <span class="keyword">return</span> r</span><br></pre></td></tr></table></figure>
       
