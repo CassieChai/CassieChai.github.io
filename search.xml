@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[jQuery选择器]]></title>
+    <url>%2F2018%2F03%2F23%2FjQuery%E9%80%89%E6%8B%A9%E5%99%A8%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>jQuery</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[nodejs笔记]]></title>
+    <url>%2F2018%2F03%2F21%2Fnodejs%E7%AC%94%E8%AE%B0%2F</url>
+    <content type="text"><![CDATA[常用网站 nodejs.org看看nodejs的版本升级，新特性的加入，重要bug的修复等 www.npmjs.com模块社区，看他人源代码，省力 github.com大量的项目和源码 stackoverflow.com技术解答社区以及查询相关资源，环境配置，异常均可找到答案]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>nodejs</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[牛顿迭代法求平方根]]></title>
     <url>%2F2018%2F03%2F19%2F%E7%89%9B%E9%A1%BF%E8%BF%AD%E4%BB%A3%E6%B3%95%E6%B1%82%E5%B9%B3%E6%96%B9%E6%A0%B9%2F</url>
     <content type="text"><![CDATA[牛顿迭代法从函数意义上理解：我们是要求函数f(x) = x²，使f(x) = num的近似解，即x² - num = 0的近似解。 从几何意义上理解：我们是要求抛物线g(x) = x² - num与x轴交点（g(x) = 0）最接近的点。 我们假设g(x0)=0，即x0是正解，那么我们要做的就是让近似解x不断逼近x0。 先任取一个初始值xi，经过这个点（xi,f(xi)）的切线方程为 f(x) = f(xi) + f′(xi)(x−xi)，令切线方程等于0 (纵轴截距取0)，即可求出： 可以由此得到 从几何图形上看，因为导数是切线，通过不断迭代，导数与x轴的交点会不断逼近x0。 123456789def mySqrt(self, x): """ :type x: int :rtype: int """ r = x while r*r &gt; x: r = (r + x/r) / 2 return r]]></content>
@@ -36,27 +59,11 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Python中的常用模块]]></title>
-    <url>%2F2018%2F03%2F14%2FPython%E4%B8%AD%E7%9A%84%E5%B8%B8%E7%94%A8%E6%A8%A1%E5%9D%97%2F</url>
-    <content type="text"></content>
-      <categories>
-        <category>python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[文档坐标和视口坐标]]></title>
     <url>%2F2018%2F03%2F14%2F%E6%96%87%E6%A1%A3%E5%9D%90%E6%A0%87%E5%92%8C%E8%A7%86%E5%8F%A3%E5%9D%90%E6%A0%87%2F</url>
     <content type="text"><![CDATA[文档坐标和视口坐标视口坐标是相对于窗口的坐标，而文档坐标是相对于整个文档而言。例如，在文档坐标中如果一个元素的相对于文档的Y坐标是200px，并且用户已经把浏览器向下滚动了75px，那么视口坐标中元素的Y坐标为200px– 75px = 125px。]]></content>
       <tags>
         <tag>html</tag>
       </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2018%2F01%2F23%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
   </entry>
 </search>
