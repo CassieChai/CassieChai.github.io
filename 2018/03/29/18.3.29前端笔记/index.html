@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Cassie Chai&#39;s blog">
 <meta property="og:description" content="屏幕的尺寸标准    超小屏幕（手机） 小屏幕（平板） 中等屏幕（桌面） 大屏幕（桌面）     尺寸 &amp;lt;768px &amp;gt;=768 &amp;gt;=992 &amp;gt;=1200   类前缀 .col-xs- .col-sm- .col-md- .col-lg-    选择器的优先级   优先级 权重     在属性后面使用 !important 会覆盖页面内任何位置定义的元素样式    作为st">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-29T02:18:53.949Z">
+<meta property="og:updated_time" content="2018-04-11T02:15:08.859Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="18.3.29前端笔记">
 <meta name="twitter:description" content="屏幕的尺寸标准    超小屏幕（手机） 小屏幕（平板） 中等屏幕（桌面） 大屏幕（桌面）     尺寸 &amp;lt;768px &amp;gt;=768 &amp;gt;=992 &amp;gt;=1200   类前缀 .col-xs- .col-sm- .col-md- .col-lg-    选择器的优先级   优先级 权重     在属性后面使用 !important 会覆盖页面内任何位置定义的元素样式    作为st">
@@ -381,7 +381,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,099 字
+                  1,126 字
                 </span>
               
 
@@ -493,14 +493,9 @@
 </table>
 <p><strong>优先级是：内联样式 &gt; id 选择器 &gt; 类选择器 = 属性选择器 = 伪类选择器 &gt; 标签选择器 = 伪元素选择器</strong> </p>
 <p>多个选择器组合的时候，不应该简单地给这些选择器分配权值，然后相加比较大小。因为优先级是不能越级的，比方说 1 个 id 选择器能顶你 n 个类选择器…所以要逐级比较，同级的就比较数量，数量多的优先级高。 当然，!important 的优先级最高。</p>
-<h2 id="标签的嵌套"><a href="#标签的嵌套" class="headerlink" title="标签的嵌套"></a>标签的嵌套</h2><p><li> 标签定义列表项目。</li><li> 标签可用在有序列表 (<ol>) 和无序列表 (<ul>) 中。</ul></ol></li></p>
-<p><dl>标签定义了一个定义列表，定义列表中的条目是通过使用<dt>标记(“definition title”，定义标题)和<dd>标记(“definition description”，定义描述)创建的。<dt>给出了术语名，<dd>标记给出了术语的定义。</dd></dt></dd></dt></dl></p>
-<p><table>代表表格</table> </p>
-<p><tr>代表表格中的一行</tr> </p>
-<td>代表表格中的一列</td>
-
+<h2 id="标签的嵌套"><a href="#标签的嵌套" class="headerlink" title="标签的嵌套"></a>标签的嵌套</h2><p>&lt;li&gt; 标签定义列表项目。&lt;li&gt; 标签可用在有序列表 (&lt;ol&gt;) 和无序列表 (&lt;ul&gt;) 中。<br>&lt;dl&gt;标签定义了一个定义列表，定义列表中的条目是通过使用&lt;dt&gt;标记(“definition title”，定义标题)和&lt;dd&gt;标记(“definition description”，定义描述)创建的。&lt;dt&gt;给出了术语名，&lt;dd&gt;标记给出了术语的定义。<br>&lt;table&gt;代表表格&lt;/table&gt;<br>&lt;tr&gt;代表表格中的一行&lt;/tr&gt;<br>&lt;td&gt;代表表格中的一列&lt;/td&gt;</p>
 <ul>
-<li><ul>里面只能放<li>，但是</li><li>里面可以放<h*>,<p>等标签。 </p></h*></li>
+<li>&lt;ul&gt;里面只能放&lt;li&gt;，但是&lt;li&gt;里面可以放<h*>,&lt;p&gt;等标签。 </h*></li>
 <li>dt标签和dd标签必须嵌套在dl标签里面，并且dt标签必须位于dd标签前面；</li>
 <li>tr标签和td标签必须嵌套在table标签里面，其中td标签必须位于tr标签里面。</li>
 </ul>
@@ -574,7 +569,7 @@
 <p>Flash能够更容易的调用浏览器以外的外部资源。比如摄像头、麦克风等。然而这是普通的HTML无法完成的。</p>
 </li>
 </ul>
-</li></ul>
+
       
     </div>
     
