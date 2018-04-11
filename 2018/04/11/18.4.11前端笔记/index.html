@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Cassie Chai&#39;s blog">
 <meta property="og:description" content="link和@import页面中使用CSS的方式主要有3种：行内添加定义style属性值，页面头部内嵌调用和外面链接调用. 其中外面引用有两种：link和@import。方式分别是： link:1&amp;lt;link rel=&quot;stylesheet&quot; rev=&quot;stylesheet&quot; href=&quot;CSS文件&quot; type=&quot;text/css&quot; media=&quot;all&quot; /&amp;gt; @import:123&amp;l">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-11T03:04:59.468Z">
+<meta property="og:updated_time" content="2018-04-11T03:08:59.401Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="18.4.11前端笔记">
 <meta name="twitter:description" content="link和@import页面中使用CSS的方式主要有3种：行内添加定义style属性值，页面头部内嵌调用和外面链接调用. 其中外面引用有两种：link和@import。方式分别是： link:1&amp;lt;link rel=&quot;stylesheet&quot; rev=&quot;stylesheet&quot; href=&quot;CSS文件&quot; type=&quot;text/css&quot; media=&quot;all&quot; /&amp;gt; @import:123&amp;l">
@@ -381,7 +381,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  961 字
+                  953 字
                 </span>
               
 
@@ -397,7 +397,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  4 分钟
+                  3 分钟
                 </span>
               
             </div>
@@ -423,14 +423,20 @@
 <p>link:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">rev</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"CSS文件"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">media</span>=<span class="string">"all"</span> /&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p>@import:<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">media</span>=<span class="string">"screen"</span>&gt;</span><span class="undefined"> </span></span><br><span class="line"><span class="undefined">@import url("CSS文件"); </span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p>两者都是外部引用CSS的方式，但是存在一定的区别：</p>
-<p>区别1：link是<strong>XHTML</strong>标签，除了加载CSS外，还可以定义RSS等其他事务；</p>
-<p>​          @import属于<strong>CSS</strong>范畴，只能加载CSS。</p>
-<p>区别2：link引用CSS时，在页面载入时<strong>同时加载</strong>；</p>
-<p>​          @import需要页面网页完全<strong>载入以后加载</strong>。</p>
-<p>区别3：link是XHTML标签，无兼容问题；</p>
-<p>​         @import是在CSS2.1提出的，<strong>低版本的浏览器不支持</strong>。</p>
-<p>区别4：ink支持使用<strong>Javascript控制DOM去改变样式</strong>；</p>
-<p>​          @import不支持。</p>
+<ol>
+<li><p>link是<strong>XHTML</strong>标签，除了加载CSS外，还可以定义RSS等其他事务；</p>
+<p>@import属于<strong>CSS</strong>范畴，只能加载CSS。</p>
+</li>
+<li><p>link引用CSS时，在页面载入时<strong>同时加载</strong>；</p>
+<p>@import需要页面网页完全<strong>载入以后加载</strong>。</p>
+</li>
+<li><p>link是XHTML标签，无兼容问题；</p>
+<p>@import是在CSS2.1提出的，<strong>低版本的浏览器不支持</strong>。</p>
+</li>
+<li><p>link支持使用<strong>Javascript控制DOM去改变样式</strong>；</p>
+<p>@import不支持。</p>
+</li>
+</ol>
 <h1 id="HTML的Doctype和严格模式与混杂模式"><a href="#HTML的Doctype和严格模式与混杂模式" class="headerlink" title="HTML的Doctype和严格模式与混杂模式"></a>HTML的Doctype和严格模式与混杂模式</h1><p>&lt;!DOCTYPE&gt; 声明位于文档中的最前面，处于&lt;html&gt;标签之前。告知浏览器的解析器，用什么文档类型 规范来解析这个文档<br>浏览器根据DOCTYPE是否存在以及使用的哪种DTD来选择要使用的呈现方法</p>
 <h3 id="文档类型-DTD"><a href="#文档类型-DTD" class="headerlink" title="文档类型(DTD)"></a>文档类型(DTD)</h3><p>DTD（文档类型定义）是一组机器可读的规则，他们定义 <strong>XML</strong>(可扩展标记语言) 或 <strong>HTML</strong>(超文本标记语言)的特定版本中允许有什么，不允许有什么。在解析网页时，浏览器将使用这些规则检查页面的有效性并且采取相应的措施。浏览器通过分析页面的DOCTYPE 声明来了解要使用哪个 DTD ，由此知道要使用 HTML 的哪个版本。 </p>
 <p>DOCTYPE 当前有两种风格，<strong>严格</strong>（ strict ）和<strong>过渡</strong>（ transitional ）。过渡  DOCTYPE 的目的是帮助开发人员从老版本迁移到新版本。 </p>
